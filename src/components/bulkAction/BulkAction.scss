@@ -1,0 +1,35 @@
+@import '../../utilities/variable';
+
+.bulk__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  margin-top: 20px;
+  background-color: $gray-color;
+
+  span {
+    width: 200px;
+  }
+
+  button {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 120px;
+    margin: 0 20px;
+  }
+
+  .bulk__done-button {
+    background-color: $primary-color;
+  }
+
+  .bulk__remove-button {
+    background-color: $danger-color;
+  }
+}

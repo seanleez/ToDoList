@@ -1,0 +1,117 @@
+@import '../../utilities/variable';
+
+.button__add-new {
+  height: 40px;
+  background-color: $success-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+
+  .modal__content {
+    position: absolute;
+    top: 10%;
+    width: 400px;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+
+    .modal__close-button {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      right: 0;
+      top: 0;
+      margin: 0;
+      background-color: $danger-color;
+    }
+
+    .modal__input {
+      width: 80%;
+      line-height: 30px;
+      border-radius: 5px;
+    }
+
+    .description {
+      width: 80%;
+      margin: auto;
+
+      textarea {
+        width: 100%;
+      }
+    }
+
+    .modal__other-infor {
+      width: 80%;
+      display: flex;
+      margin: auto;
+      gap: 20px;
+      .due-date,
+      .priority {
+        width: 50%;
+      }
+
+      input,
+      select {
+        width: 100%;
+        height: 30px;
+      }
+    }
+
+    h5 {
+      text-align: left;
+    }
+
+    button {
+      width: 80%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: $success-color;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    p {
+      margin: 5px auto;
+      text-align: left;
+      width: 80%;
+      color: red;
+    }
+
+    .error {
+      border: 1px solid red;
+      outline: none;
+      box-shadow: 0 0 5px red;
+    }
+  }
+
+  .modal__overlay--hidden {
+    display: none;
+  }
+
+  .modal__overlay--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+  }
+}
+
+@media only screen and (max-width: $break-point-mobile) {
+  .modal {
+    .modal__content {
+      width: 300px;
+    }
+  }
+}
