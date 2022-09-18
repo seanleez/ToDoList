@@ -15,10 +15,6 @@ const TodoThing: FC<ITodoThing> = (props) => {
   const { id, todoThingContent, onRemoveTodoThing, onUpdateTodoThing, onCheckbox } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log('re-render TodoThing');
-  });
-
   const checkboxRef = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const titleInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;

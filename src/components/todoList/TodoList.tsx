@@ -13,10 +13,6 @@ interface ITodoList {
 const TodoList: FC<ITodoList> = (props) => {
   const { todoList, searchValue, onRemoveTodoThing, onUpdateTodoThing, onCheckbox } = props;
 
-  useEffect(() => {
-    console.log('re-render TodoList');
-  });
-
   return (
     <>
       {todoList

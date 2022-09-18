@@ -16,10 +16,6 @@ function App() {
   const [checkedValues, setCheckedValues] = useState<string[]>([]);
 
   useEffect(() => {
-    console.log('re-render App');
-  });
-
-  useEffect(() => {
     localStorage.setItem('todoList', JSON.stringify(todoList));
   }, [todoList]);
 

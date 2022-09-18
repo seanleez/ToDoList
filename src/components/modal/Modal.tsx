@@ -22,10 +22,6 @@ function getCurrentDate() {
 const Modal: FC<IModal> = ({ handleAddNewTodoThing }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log('re-render modal');
-  });
-
   const titleInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
   const descriptionTextAreaRef = useRef() as React.MutableRefObject<HTMLTextAreaElement>;
   const dueDateInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;

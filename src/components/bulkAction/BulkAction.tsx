@@ -5,9 +5,6 @@ interface IBulkAction {
 }
 
 const BulkAction: FC<IBulkAction> = ({ onRemoveMultiple }) => {
-  useEffect(() => {
-    console.log('re-render Bulk');
-  });
   return (
     <div className="bulk__container">
       <span>Bulk Action:</span>
